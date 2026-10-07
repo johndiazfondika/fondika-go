@@ -21,8 +21,11 @@ CLIENT_NAME=evolution
 GLOBAL_API_KEY=9719549FD0D877B1B95C0518A156C92C
 
 # Database Configuration
-POSTGRES_AUTH_DB=postgresql://postgres:***@evolution-api-db:5432/evogo_auth
-POSTGRES_USERS_DB=postgresql://postgres:***@evolution-api-db:5432/evogo_users
+POSTGRES_AUTH_DB=postgresql://postgres:***@fondika-go-db:5432/evogo_auth
+POSTGRES_USERS_DB=postgresql://postgres:***@fondika-go-db:5432/evogo_users
+
+# Redis Configuration
+REDIS_URL=redis://:***@fondika-go-redis:6379
 
 # Database Options
 DATABASE_SAVE_MESSAGES=true
@@ -45,10 +48,17 @@ WEBHOOK_FILES=true
 
 El proyecto `tools` incluye:
 
-1. **fondika-go** - API principal (este servicio)
-2. **evolution-api** - Evolution API v2.3.7
-3. **evolution-api-db** - PostgreSQL 17
-4. **evolution-api-redis** - Redis 7
+### Servicios fondika-go (dedicados)
+
+1. **fondika-go** - API principal
+2. **fondika-go-db** - PostgreSQL 17 (dedicado)
+3. **fondika-go-redis** - Redis 7 (dedicado)
+
+### Servicios Evolution API (legacy)
+
+4. **evolution-api** - Evolution API v2.3.7
+5. **evolution-api-db** - PostgreSQL 17
+6. **evolution-api-redis** - Redis 7
 
 ## Configuración con Easypanel CLI
 
