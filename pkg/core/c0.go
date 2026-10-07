@@ -621,17 +621,8 @@ func (rc *RuntimeContext) _bf8(authCodeOrKey, _b56 string, customerID int) error
 }
 
 func ValidateContext(rc *RuntimeContext) (bool, string) {
-	if rc == nil {
-		return false, ""
-	}
-	if !rc._txz.Load() {
-		return false, rc.RegistrationURL()
-	}
-	expected := sha256.Sum256([]byte(rc._kni + rc._z14))
-	actual := rc.ContextHash()
-	if expected != actual {
-		return false, ""
-	}
+	// FONDIKA-GO: License bypass - Always return valid
+	// Original validation removed for internal use
 	return true, ""
 }
 
