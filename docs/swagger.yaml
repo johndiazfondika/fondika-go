@@ -9829,4 +9829,10 @@ paths:
       summary: Unblock a contact
       tags:
       - User
+securityDefinitions:
+  ApiKeyAuth:
+    type: apiKey
+    name: apikey
+    in: header
+    description: API Key para autenticación. Puede ser el API Key global o el token de instancia.
 swagger: "2.0"

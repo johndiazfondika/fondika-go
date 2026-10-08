@@ -14307,6 +14307,14 @@ const docTemplate = `{
                 "ParticipantChangeDemote"
             ]
         }
+    },
+    "securityDefinitions": {
+        "ApiKeyAuth": {
+            "type": "apiKey",
+            "name": "apikey",
+            "in": "header",
+            "description": "API Key para autenticación. Puede ser el API Key global o el token de instancia."
+        }
     }
 }`
 

@@ -329,6 +329,10 @@ func initPostgresAuthDB(config *config.Config) (*sql.DB, error) {
 // @title Evolution GO
 // @version 1.0
 // @description Evolution GO - whatsmeow
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name apikey
+// @description API Key para autenticación. Puede ser el API Key global o el token de instancia.
 func main() {
 	flag.Parse()
 	if *devMode {
