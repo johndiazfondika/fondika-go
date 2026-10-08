@@ -17,6 +17,11 @@ const docTemplate = `{
     "paths": {
         "/call/reject": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Reject call",
                 "consumes": [
                     "application/json"
@@ -35,7 +40,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_call_service.RejectCallStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_call_service.RejectCallStruct"
                         }
                     }
                 ],
@@ -57,6 +62,11 @@ const docTemplate = `{
         },
         "/chat/archive": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Archive a chat",
                 "consumes": [
                     "application/json"
@@ -75,7 +85,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -103,6 +113,11 @@ const docTemplate = `{
         },
         "/chat/history-sync": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "HistorySyncRequest a chat",
                 "consumes": [
                     "application/json"
@@ -121,7 +136,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.HistorySyncRequestStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.HistorySyncRequestStruct"
                         }
                     }
                 ],
@@ -149,6 +164,11 @@ const docTemplate = `{
         },
         "/chat/mute": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Mute a chat",
                 "consumes": [
                     "application/json"
@@ -167,7 +187,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -195,6 +215,11 @@ const docTemplate = `{
         },
         "/chat/pin": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Pin a chat",
                 "consumes": [
                     "application/json"
@@ -213,7 +238,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -241,6 +266,11 @@ const docTemplate = `{
         },
         "/chat/unarchive": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Unarchive a chat",
                 "consumes": [
                     "application/json"
@@ -259,7 +289,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -287,6 +317,11 @@ const docTemplate = `{
         },
         "/chat/unmute": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Unmute a chat",
                 "consumes": [
                     "application/json"
@@ -305,7 +340,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -333,6 +368,11 @@ const docTemplate = `{
         },
         "/chat/unpin": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Unpin a chat",
                 "consumes": [
                     "application/json"
@@ -351,7 +391,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct"
                         }
                     }
                 ],
@@ -379,6 +419,11 @@ const docTemplate = `{
         },
         "/community/add": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Add participant to community",
                 "consumes": [
                     "application/json"
@@ -397,7 +442,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_community_service.AddParticipantStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_community_service.AddParticipantStruct"
                         }
                     }
                 ],
@@ -425,6 +470,11 @@ const docTemplate = `{
         },
         "/community/create": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Create community",
                 "consumes": [
                     "application/json"
@@ -443,7 +493,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_community_service.CreateCommunityStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_community_service.CreateCommunityStruct"
                         }
                     }
                 ],
@@ -471,6 +521,11 @@ const docTemplate = `{
         },
         "/community/remove": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Remove participant from community",
                 "consumes": [
                     "application/json"
@@ -489,7 +544,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_community_service.AddParticipantStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_community_service.AddParticipantStruct"
                         }
                     }
                 ],
@@ -517,6 +572,11 @@ const docTemplate = `{
         },
         "/group/create": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Create group",
                 "consumes": [
                     "application/json"
@@ -535,7 +595,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.CreateGroupStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.CreateGroupStruct"
                         }
                     }
                 ],
@@ -563,6 +623,11 @@ const docTemplate = `{
         },
         "/group/description": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set group description",
                 "consumes": [
                     "application/json"
@@ -581,7 +646,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupDescriptionStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupDescriptionStruct"
                         }
                     }
                 ],
@@ -609,6 +674,11 @@ const docTemplate = `{
         },
         "/group/info": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get group info",
                 "consumes": [
                     "application/json"
@@ -627,7 +697,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.GetGroupInfoStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.GetGroupInfoStruct"
                         }
                     }
                 ],
@@ -655,6 +725,11 @@ const docTemplate = `{
         },
         "/group/invitelink": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get group invite link",
                 "consumes": [
                     "application/json"
@@ -673,7 +748,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.GetGroupInviteLinkStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.GetGroupInviteLinkStruct"
                         }
                     }
                 ],
@@ -701,6 +776,11 @@ const docTemplate = `{
         },
         "/group/join": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Join group link",
                 "consumes": [
                     "application/json"
@@ -719,7 +799,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.JoinGroupStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.JoinGroupStruct"
                         }
                     }
                 ],
@@ -747,6 +827,11 @@ const docTemplate = `{
         },
         "/group/leave": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Leave group",
                 "consumes": [
                     "application/json"
@@ -765,7 +850,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.LeaveGroupStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.LeaveGroupStruct"
                         }
                     }
                 ],
@@ -793,6 +878,11 @@ const docTemplate = `{
         },
         "/group/list": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "List groups",
                 "consumes": [
                     "application/json"
@@ -822,6 +912,11 @@ const docTemplate = `{
         },
         "/group/myall": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get my groups",
                 "consumes": [
                     "application/json"
@@ -851,6 +946,11 @@ const docTemplate = `{
         },
         "/group/name": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set group name",
                 "consumes": [
                     "application/json"
@@ -869,7 +969,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupNameStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupNameStruct"
                         }
                     }
                 ],
@@ -897,6 +997,11 @@ const docTemplate = `{
         },
         "/group/participant": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Update participant",
                 "consumes": [
                     "application/json"
@@ -915,7 +1020,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.AddParticipantStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.AddParticipantStruct"
                         }
                     }
                 ],
@@ -943,6 +1048,11 @@ const docTemplate = `{
         },
         "/group/photo": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set group photo",
                 "consumes": [
                     "application/json"
@@ -961,7 +1071,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupPhotoStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupPhotoStruct"
                         }
                     }
                 ],
@@ -989,6 +1099,11 @@ const docTemplate = `{
         },
         "/group/settings": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Update group settings (announcement, not_announcement, locked, unlocked, approval_on, approval_off, admin_add, all_member_add)",
                 "consumes": [
                     "application/json"
@@ -1007,7 +1122,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_group_service.UpdateGroupSettingsStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_group_service.UpdateGroupSettingsStruct"
                         }
                     }
                 ],
@@ -1035,6 +1150,11 @@ const docTemplate = `{
         },
         "/instance/all": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get all instances",
                 "consumes": [
                     "application/json"
@@ -1064,6 +1184,11 @@ const docTemplate = `{
         },
         "/instance/connect": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Connect to instance with the provided data",
                 "consumes": [
                     "application/json"
@@ -1082,7 +1207,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.ConnectStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.ConnectStruct"
                         }
                     }
                 ],
@@ -1110,6 +1235,11 @@ const docTemplate = `{
         },
         "/instance/create": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Creates a new instance with the provided data including optional advanced settings",
                 "consumes": [
                     "application/json"
@@ -1128,7 +1258,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.CreateStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.CreateStruct"
                         }
                     }
                 ],
@@ -1156,6 +1286,11 @@ const docTemplate = `{
         },
         "/instance/delete/{instanceId}": {
             "delete": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Delete instance",
                 "consumes": [
                     "application/json"
@@ -1200,6 +1335,11 @@ const docTemplate = `{
         },
         "/instance/disconnect": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Disconnect from instance",
                 "consumes": [
                     "application/json"
@@ -1229,6 +1369,11 @@ const docTemplate = `{
         },
         "/instance/forcereconnect/{instanceId}": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Force reconnect",
                 "consumes": [
                     "application/json"
@@ -1254,7 +1399,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.ForceReconnectStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.ForceReconnectStruct"
                         }
                     }
                 ],
@@ -1282,6 +1427,11 @@ const docTemplate = `{
         },
         "/instance/info/{instanceId}": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get instance",
                 "consumes": [
                     "application/json"
@@ -1326,6 +1476,11 @@ const docTemplate = `{
         },
         "/instance/logout": {
             "delete": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Logout from instance",
                 "consumes": [
                     "application/json"
@@ -1355,6 +1510,11 @@ const docTemplate = `{
         },
         "/instance/logs/{instanceId}": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Returns log entries for an instance, filterable by date range, level and limit",
                 "produces": [
                     "application/json"
@@ -1420,6 +1580,11 @@ const docTemplate = `{
         },
         "/instance/pair": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Request pairing code",
                 "consumes": [
                     "application/json"
@@ -1438,7 +1603,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.PairStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.PairStruct"
                         }
                     }
                 ],
@@ -1466,6 +1631,11 @@ const docTemplate = `{
         },
         "/instance/proxy/{instanceId}": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set proxy configuration for an instance",
                 "consumes": [
                     "application/json"
@@ -1491,7 +1661,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.SetProxyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.SetProxyStruct"
                         }
                     }
                 ],
@@ -1517,6 +1687,11 @@ const docTemplate = `{
                 }
             },
             "delete": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Delete proxy",
                 "consumes": [
                     "application/json"
@@ -1561,6 +1736,11 @@ const docTemplate = `{
         },
         "/instance/qr": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get instance QR code",
                 "consumes": [
                     "application/json"
@@ -1590,6 +1770,11 @@ const docTemplate = `{
         },
         "/instance/reconnect": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Reconnect to instance",
                 "consumes": [
                     "application/json"
@@ -1619,6 +1804,11 @@ const docTemplate = `{
         },
         "/instance/status": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get instance status",
                 "consumes": [
                     "application/json"
@@ -1648,6 +1838,11 @@ const docTemplate = `{
         },
         "/instance/{instanceId}/advanced-settings": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get advanced settings for a specific instance",
                 "produces": [
                     "application/json"
@@ -1669,7 +1864,7 @@ const docTemplate = `{
                     "200": {
                         "description": "Advanced settings retrieved successfully",
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_model.AdvancedSettings"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_model.AdvancedSettings"
                         }
                     },
                     "400": {
@@ -1693,6 +1888,11 @@ const docTemplate = `{
                 }
             },
             "put": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Update advanced settings for a specific instance",
                 "consumes": [
                     "application/json"
@@ -1718,7 +1918,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_model.AdvancedSettings"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_model.AdvancedSettings"
                         }
                     }
                 ],
@@ -1752,6 +1952,11 @@ const docTemplate = `{
         },
         "/label/chat": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Add label to chat",
                 "consumes": [
                     "application/json"
@@ -1770,7 +1975,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_label_service.ChatLabelStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_label_service.ChatLabelStruct"
                         }
                     }
                 ],
@@ -1798,6 +2003,11 @@ const docTemplate = `{
         },
         "/label/edit": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Edit label",
                 "consumes": [
                     "application/json"
@@ -1816,7 +2026,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_label_service.EditLabelStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_label_service.EditLabelStruct"
                         }
                     }
                 ],
@@ -1844,6 +2054,11 @@ const docTemplate = `{
         },
         "/label/list": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get all labels",
                 "consumes": [
                     "application/json"
@@ -1873,6 +2088,11 @@ const docTemplate = `{
         },
         "/label/message": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Add label to message",
                 "consumes": [
                     "application/json"
@@ -1891,7 +2111,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_label_service.MessageLabelStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_label_service.MessageLabelStruct"
                         }
                     }
                 ],
@@ -1917,91 +2137,13 @@ const docTemplate = `{
                 }
             }
         },
-        "/license/activate": {
-            "get": {
-                "description": "Exchanges an authorization code (from the registration callback) for an api_key and persists it. Provide the code via the query string.",
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "License"
-                ],
-                "summary": "Activate license",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Authorization code from the registration callback",
-                        "name": "code",
-                        "in": "query",
-                        "required": true
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Activation result",
-                        "schema": {
-                            "$ref": "#/definitions/gin.H"
-                        }
-                    },
-                    "400": {
-                        "description": "Missing code parameter",
-                        "schema": {
-                            "$ref": "#/definitions/gin.H"
-                        }
-                    }
-                }
-            }
-        },
-        "/license/register": {
-            "get": {
-                "description": "Checks the GLOBAL_API_KEY with the licensing server. If not yet registered, initiates registration and returns a register_url. Accepts an optional redirect_uri for the post-registration redirect.",
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "License"
-                ],
-                "summary": "Register / get registration URL",
-                "parameters": [
-                    {
-                        "type": "string",
-                        "description": "Post-registration redirect URI",
-                        "name": "redirect_uri",
-                        "in": "query"
-                    }
-                ],
-                "responses": {
-                    "200": {
-                        "description": "Registration state (status/message or register_url)",
-                        "schema": {
-                            "$ref": "#/definitions/gin.H"
-                        }
-                    }
-                }
-            }
-        },
-        "/license/status": {
-            "get": {
-                "description": "Returns whether the instance license is active, along with the instance id and a masked api key.",
-                "produces": [
-                    "application/json"
-                ],
-                "tags": [
-                    "License"
-                ],
-                "summary": "Get license status",
-                "responses": {
-                    "200": {
-                        "description": "License status ({status, instance_id, api_key?})",
-                        "schema": {
-                            "$ref": "#/definitions/gin.H"
-                        }
-                    }
-                }
-            }
-        },
         "/message/delete": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Delete a message for everyone",
                 "consumes": [
                     "application/json"
@@ -2020,7 +2162,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.MessageStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.MessageStruct"
                         }
                     }
                 ],
@@ -2048,6 +2190,11 @@ const docTemplate = `{
         },
         "/message/downloadmedia": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Download the media content of a message (image, video, audio or document)",
                 "consumes": [
                     "application/json"
@@ -2066,7 +2213,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.DownloadMediaStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.DownloadMediaStruct"
                         }
                     }
                 ],
@@ -2094,6 +2241,11 @@ const docTemplate = `{
         },
         "/message/edit": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Edit a message",
                 "consumes": [
                     "application/json"
@@ -2112,7 +2264,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.EditMessageStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.EditMessageStruct"
                         }
                     }
                 ],
@@ -2140,6 +2292,11 @@ const docTemplate = `{
         },
         "/message/markplayed": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Mark an audio message as played",
                 "consumes": [
                     "application/json"
@@ -2158,7 +2315,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.MarkPlayedStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.MarkPlayedStruct"
                         }
                     }
                 ],
@@ -2186,6 +2343,11 @@ const docTemplate = `{
         },
         "/message/markread": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Mark a message as read",
                 "consumes": [
                     "application/json"
@@ -2204,7 +2366,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.MarkReadStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.MarkReadStruct"
                         }
                     }
                 ],
@@ -2232,6 +2394,11 @@ const docTemplate = `{
         },
         "/message/presence": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set chat presence",
                 "consumes": [
                     "application/json"
@@ -2250,7 +2417,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.ChatPresenceStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.ChatPresenceStruct"
                         }
                     }
                 ],
@@ -2278,6 +2445,11 @@ const docTemplate = `{
         },
         "/message/react": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "React to a message with support for fromMe field and participant field for group messages",
                 "consumes": [
                     "application/json"
@@ -2296,7 +2468,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.ReactStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.ReactStruct"
                         }
                     }
                 ],
@@ -2324,6 +2496,11 @@ const docTemplate = `{
         },
         "/message/status": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get message status",
                 "consumes": [
                     "application/json"
@@ -2342,7 +2519,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_message_service.MessageStatusStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_message_service.MessageStatusStruct"
                         }
                     }
                 ],
@@ -2370,6 +2547,11 @@ const docTemplate = `{
         },
         "/newsletter/create": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Create newsletter",
                 "consumes": [
                     "application/json"
@@ -2388,7 +2570,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.CreateNewsletterStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_newsletter_service.CreateNewsletterStruct"
                         }
                     }
                 ],
@@ -2416,6 +2598,11 @@ const docTemplate = `{
         },
         "/newsletter/info": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get newsletter",
                 "consumes": [
                     "application/json"
@@ -2434,7 +2621,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterStruct"
                         }
                     }
                 ],
@@ -2462,6 +2649,11 @@ const docTemplate = `{
         },
         "/newsletter/link": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get newsletter invite",
                 "consumes": [
                     "application/json"
@@ -2480,7 +2672,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterInviteStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterInviteStruct"
                         }
                     }
                 ],
@@ -2508,6 +2700,11 @@ const docTemplate = `{
         },
         "/newsletter/list": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "List newsletters",
                 "consumes": [
                     "application/json"
@@ -2537,6 +2734,11 @@ const docTemplate = `{
         },
         "/newsletter/messages": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get newsletter messages",
                 "consumes": [
                     "application/json"
@@ -2555,7 +2757,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterMessagesStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterMessagesStruct"
                         }
                     }
                 ],
@@ -2583,6 +2785,11 @@ const docTemplate = `{
         },
         "/newsletter/subscribe": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Subscribe newsletter",
                 "consumes": [
                     "application/json"
@@ -2601,7 +2808,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterStruct"
                         }
                     }
                 ],
@@ -2629,6 +2836,11 @@ const docTemplate = `{
         },
         "/passkey-ceremony/{token}": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Returns the current WebAuthn passkey-pairing ceremony state for a token. PUBLIC endpoint (no apikey) — access is gated by the opaque short-lived ceremony token. Polled by the Evolution Passkey Helper browser extension.",
                 "produces": [
                     "application/json"
@@ -2676,6 +2888,11 @@ const docTemplate = `{
         },
         "/passkey-ceremony/{token}/confirm": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Finishes the passkey pairing after the user verified the confirmation code. PUBLIC endpoint (no apikey) — gated by the ceremony token.",
                 "produces": [
                     "application/json"
@@ -2729,6 +2946,11 @@ const docTemplate = `{
         },
         "/passkey-ceremony/{token}/response": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Receives the WebAuthn assertion produced by the browser extension and forwards it to WhatsApp. PUBLIC endpoint (no apikey) — gated by the ceremony token. Body is the WebAuthnResponse shape (id, rawId, type, response{clientDataJSON, authenticatorData, signature, userHandle?}), base64url-unpadded.",
                 "consumes": [
                     "application/json"
@@ -2794,6 +3016,11 @@ const docTemplate = `{
         },
         "/polls/{pollMessageId}/results": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Retorna todos os votos de uma enquete específica",
                 "consumes": [
                     "application/json"
@@ -2818,7 +3045,7 @@ const docTemplate = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_poll_model.PollResults"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_poll_model.PollResults"
                         }
                     },
                     "400": {
@@ -2844,6 +3071,11 @@ const docTemplate = `{
         },
         "/send/button": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send an interactive message with buttons. Each button has a ` + "`" + `type` + "`" + `: ` + "`" + `reply` + "`" + `, ` + "`" + `copy` + "`" + `, ` + "`" + `url` + "`" + `, ` + "`" + `call` + "`" + ` or ` + "`" + `pix` + "`" + `.\n\nCombination rules enforced by the server:\n- Up to 3 ` + "`" + `reply` + "`" + ` buttons per message.\n- ` + "`" + `reply` + "`" + ` buttons cannot be mixed with any other type.\n- ` + "`" + `pix` + "`" + ` button must be sent ALONE (no other button in the same message).\n\nWhatsApp client rendering quirks (NOT enforced by the server, but verified in the field):\n- WhatsApp Web: only ` + "`" + `reply` + "`" + `-only messages (up to 3) OR CTAs grouped together (` + "`" + `copy` + "`" + ` + ` + "`" + `url` + "`" + ` + ` + "`" + `call` + "`" + `) render correctly.\n- Do NOT mix ` + "`" + `reply` + "`" + ` with CTA buttons (` + "`" + `copy` + "`" + `/` + "`" + `url` + "`" + `/` + "`" + `call` + "`" + `) — the message will not appear on WhatsApp Web.\n\nRequired body fields: ` + "`" + `number` + "`" + `, ` + "`" + `title` + "`" + `, ` + "`" + `description` + "`" + `, ` + "`" + `footer` + "`" + `, ` + "`" + `buttons` + "`" + `.",
                 "consumes": [
                     "application/json"
@@ -2862,7 +3094,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ButtonStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ButtonStruct"
                         }
                     }
                 ],
@@ -2890,6 +3122,11 @@ const docTemplate = `{
         },
         "/send/carousel": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send an interactive carousel (multiple swipeable cards). Each card carries its own image or video, body and optional buttons.\n\nCard button ` + "`" + `type` + "`" + ` accepted values (case-insensitive, uppercased internally): ` + "`" + `REPLY` + "`" + ` (default), ` + "`" + `URL` + "`" + `, ` + "`" + `CALL` + "`" + `, ` + "`" + `COPY` + "`" + `.\nThe ` + "`" + `PIX` + "`" + ` button type is NOT supported in carousel cards — use ` + "`" + `/send/button` + "`" + ` for PIX.\n\nIMPORTANT — ` + "`" + `CarouselButtonStruct` + "`" + ` is different from the flat button used in ` + "`" + `/send/button` + "`" + `:\n- URL button: put the link in the ` + "`" + `id` + "`" + ` field (NOT in a ` + "`" + `url` + "`" + ` field).\n- CALL button: put the phone number in the ` + "`" + `id` + "`" + ` field (NOT in a ` + "`" + `phoneNumber` + "`" + ` field).\n- COPY button: put the code to be copied in ` + "`" + `copyCode` + "`" + `.\n- REPLY button: put the payload/callback ID in ` + "`" + `id` + "`" + `.\n\nPer-card combination rules (NOT enforced by the server, but verified in the field):\n- Same WhatsApp Web quirk as ` + "`" + `/send/button` + "`" + `: avoid mixing REPLY with CTA buttons (URL/CALL/COPY) in the same card — mixed sets do not render on Web.\n- Stick to either \"only REPLY\" or \"only CTAs grouped together\" per card.\n\nRequired body fields: ` + "`" + `number` + "`" + `, ` + "`" + `cards` + "`" + ` (at least one). Each card requires ` + "`" + `header` + "`" + ` + ` + "`" + `body` + "`" + `.",
                 "consumes": [
                     "application/json"
@@ -2908,7 +3145,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselStruct"
                         }
                     }
                 ],
@@ -2936,6 +3173,11 @@ const docTemplate = `{
         },
         "/send/contact": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a contact message",
                 "consumes": [
                     "application/json"
@@ -2954,7 +3196,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ContactStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ContactStruct"
                         }
                     }
                 ],
@@ -2982,6 +3224,11 @@ const docTemplate = `{
         },
         "/send/link": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a link message",
                 "consumes": [
                     "application/json"
@@ -3000,7 +3247,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.LinkStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.LinkStruct"
                         }
                     }
                 ],
@@ -3028,6 +3275,11 @@ const docTemplate = `{
         },
         "/send/list": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send an interactive list message (single-select) rendered as a tappable menu.\n\nRequired body fields: ` + "`" + `number` + "`" + `, ` + "`" + `title` + "`" + `, ` + "`" + `description` + "`" + `, ` + "`" + `footerText` + "`" + `, ` + "`" + `buttonText` + "`" + `, ` + "`" + `sections` + "`" + `.\nEach section must contain one or more ` + "`" + `rows` + "`" + `. When ` + "`" + `rowId` + "`" + ` is omitted, the server generates a fallback ID.\nWhen ` + "`" + `buttonText` + "`" + ` is empty, the server falls back to \"Ver Menu\".\n\nUses legacy ` + "`" + `ListMessage` + "`" + ` format (no ViewOnceMessage wrapper) so it renders on iOS, Android and WhatsApp Web.",
                 "consumes": [
                     "application/json"
@@ -3046,7 +3298,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ListStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ListStruct"
                         }
                     }
                 ],
@@ -3074,6 +3326,11 @@ const docTemplate = `{
         },
         "/send/location": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a location message",
                 "consumes": [
                     "application/json"
@@ -3092,7 +3349,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.LocationStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.LocationStruct"
                         }
                     }
                 ],
@@ -3120,6 +3377,11 @@ const docTemplate = `{
         },
         "/send/media": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a media message",
                 "consumes": [
                     "application/json"
@@ -3138,7 +3400,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.MediaStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.MediaStruct"
                         }
                     }
                 ],
@@ -3166,6 +3428,11 @@ const docTemplate = `{
         },
         "/send/poll": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a poll message",
                 "consumes": [
                     "application/json"
@@ -3184,7 +3451,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.PollStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.PollStruct"
                         }
                     }
                 ],
@@ -3212,6 +3479,11 @@ const docTemplate = `{
         },
         "/send/status/media": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send an image or video status to status@broadcast. Supports JSON (URL) or multipart/form-data (file upload)",
                 "consumes": [
                     "application/json",
@@ -3281,6 +3553,11 @@ const docTemplate = `{
         },
         "/send/status/text": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a WhatsApp text status to status@broadcast",
                 "consumes": [
                     "application/json"
@@ -3299,7 +3576,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.StatusTextStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.StatusTextStruct"
                         }
                     }
                 ],
@@ -3327,6 +3604,11 @@ const docTemplate = `{
         },
         "/send/sticker": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a sticker message",
                 "consumes": [
                     "application/json"
@@ -3345,7 +3627,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.StickerStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.StickerStruct"
                         }
                     }
                 ],
@@ -3373,6 +3655,11 @@ const docTemplate = `{
         },
         "/send/text": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Send a text message",
                 "consumes": [
                     "application/json"
@@ -3391,7 +3678,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.TextStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.TextStruct"
                         }
                     }
                 ],
@@ -3419,6 +3706,11 @@ const docTemplate = `{
         },
         "/unlabel/chat": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Remove label from chat",
                 "consumes": [
                     "application/json"
@@ -3437,7 +3729,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_label_service.ChatLabelStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_label_service.ChatLabelStruct"
                         }
                     }
                 ],
@@ -3465,6 +3757,11 @@ const docTemplate = `{
         },
         "/unlabel/message": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Remove label from message",
                 "consumes": [
                     "application/json"
@@ -3483,7 +3780,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_label_service.MessageLabelStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_label_service.MessageLabelStruct"
                         }
                     }
                 ],
@@ -3511,6 +3808,11 @@ const docTemplate = `{
         },
         "/user/avatar": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get a user's avatar",
                 "consumes": [
                     "application/json"
@@ -3529,7 +3831,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.GetAvatarStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.GetAvatarStruct"
                         }
                     }
                 ],
@@ -3557,6 +3859,11 @@ const docTemplate = `{
         },
         "/user/block": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Block a contact",
                 "consumes": [
                     "application/json"
@@ -3575,7 +3882,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.BlockStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.BlockStruct"
                         }
                     }
                 ],
@@ -3603,6 +3910,11 @@ const docTemplate = `{
         },
         "/user/blocklist": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get a user's block list",
                 "consumes": [
                     "application/json"
@@ -3632,6 +3944,11 @@ const docTemplate = `{
         },
         "/user/check": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Check a user",
                 "consumes": [
                     "application/json"
@@ -3650,7 +3967,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.CheckUserStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.CheckUserStruct"
                         }
                     }
                 ],
@@ -3678,6 +3995,11 @@ const docTemplate = `{
         },
         "/user/contacts": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get a user's contacts",
                 "consumes": [
                     "application/json"
@@ -3707,6 +4029,11 @@ const docTemplate = `{
         },
         "/user/info": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get a user",
                 "consumes": [
                     "application/json"
@@ -3725,7 +4052,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.CheckUserStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.CheckUserStruct"
                         }
                     }
                 ],
@@ -3753,6 +4080,11 @@ const docTemplate = `{
         },
         "/user/privacy": {
             "get": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Get a user's privacy settings",
                 "consumes": [
                     "application/json"
@@ -3780,6 +4112,11 @@ const docTemplate = `{
                 }
             },
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set a user's privacy settings",
                 "consumes": [
                     "application/json"
@@ -3798,7 +4135,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.PrivacyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.PrivacyStruct"
                         }
                     }
                 ],
@@ -3820,6 +4157,11 @@ const docTemplate = `{
         },
         "/user/profileName": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set a user's profile name",
                 "consumes": [
                     "application/json"
@@ -3838,7 +4180,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.SetProfilePictureStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.SetProfilePictureStruct"
                         }
                     }
                 ],
@@ -3866,6 +4208,11 @@ const docTemplate = `{
         },
         "/user/profilePicture": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set a user's profile picture",
                 "consumes": [
                     "application/json"
@@ -3884,7 +4231,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.SetProfilePictureStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.SetProfilePictureStruct"
                         }
                     }
                 ],
@@ -3912,6 +4259,11 @@ const docTemplate = `{
         },
         "/user/profileStatus": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Set a user's profile status",
                 "consumes": [
                     "application/json"
@@ -3930,7 +4282,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.SetProfilePictureStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.SetProfilePictureStruct"
                         }
                     }
                 ],
@@ -3958,6 +4310,11 @@ const docTemplate = `{
         },
         "/user/unblock": {
             "post": {
+                "security": [
+                    {
+                        "ApiKeyAuth": []
+                    }
+                ],
                 "description": "Unblock a contact",
                 "consumes": [
                     "application/json"
@@ -3976,7 +4333,7 @@ const docTemplate = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_user_service.BlockStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_user_service.BlockStruct"
                         }
                     }
                 ],
@@ -4008,7 +4365,7 @@ const docTemplate = `{
             "type": "object",
             "additionalProperties": {}
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_call_service.RejectCallStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_call_service.RejectCallStruct": {
             "type": "object",
             "properties": {
                 "callCreator": {
@@ -4019,7 +4376,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_chat_service.BodyStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_chat_service.BodyStruct": {
             "type": "object",
             "properties": {
                 "chat": {
@@ -4027,7 +4384,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_chat_service.HistorySyncRequestStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_chat_service.HistorySyncRequestStruct": {
             "type": "object",
             "properties": {
                 "count": {
@@ -4038,7 +4395,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_community_service.AddParticipantStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_community_service.AddParticipantStruct": {
             "type": "object",
             "properties": {
                 "communityJid": {
@@ -4052,7 +4409,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_community_service.CreateCommunityStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_community_service.CreateCommunityStruct": {
             "type": "object",
             "properties": {
                 "communityName": {
@@ -4060,7 +4417,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.AddParticipantStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.AddParticipantStruct": {
             "type": "object",
             "properties": {
                 "action": {
@@ -4077,7 +4434,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.CreateGroupStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.CreateGroupStruct": {
             "type": "object",
             "properties": {
                 "groupName": {
@@ -4091,7 +4448,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.GetGroupInfoStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.GetGroupInfoStruct": {
             "type": "object",
             "properties": {
                 "groupJid": {
@@ -4099,7 +4456,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.GetGroupInviteLinkStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.GetGroupInviteLinkStruct": {
             "type": "object",
             "properties": {
                 "groupJid": {
@@ -4110,7 +4467,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.JoinGroupStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.JoinGroupStruct": {
             "type": "object",
             "properties": {
                 "code": {
@@ -4118,7 +4475,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.LeaveGroupStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.LeaveGroupStruct": {
             "type": "object",
             "properties": {
                 "groupJid": {
@@ -4126,7 +4483,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupDescriptionStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupDescriptionStruct": {
             "type": "object",
             "properties": {
                 "description": {
@@ -4137,7 +4494,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupNameStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupNameStruct": {
             "type": "object",
             "properties": {
                 "groupJid": {
@@ -4148,7 +4505,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.SetGroupPhotoStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.SetGroupPhotoStruct": {
             "type": "object",
             "properties": {
                 "groupJid": {
@@ -4159,7 +4516,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_group_service.UpdateGroupSettingsStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_group_service.UpdateGroupSettingsStruct": {
             "type": "object",
             "properties": {
                 "action": {
@@ -4171,7 +4528,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_model.AdvancedSettings": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_model.AdvancedSettings": {
             "type": "object",
             "properties": {
                 "alwaysOnline": {
@@ -4194,7 +4551,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.ConnectStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.ConnectStruct": {
             "type": "object",
             "properties": {
                 "immediate": {
@@ -4223,11 +4580,11 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.CreateStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.CreateStruct": {
             "type": "object",
             "properties": {
                 "advancedSettings": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_model.AdvancedSettings"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_model.AdvancedSettings"
                 },
                 "instanceId": {
                     "type": "string"
@@ -4236,14 +4593,14 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "proxy": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_instance_service.ProxyConfig"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_instance_service.ProxyConfig"
                 },
                 "token": {
                     "type": "string"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.ForceReconnectStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.ForceReconnectStruct": {
             "type": "object",
             "properties": {
                 "number": {
@@ -4251,7 +4608,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.PairStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.PairStruct": {
             "type": "object",
             "properties": {
                 "phone": {
@@ -4265,7 +4622,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.ProxyConfig": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.ProxyConfig": {
             "type": "object",
             "properties": {
                 "host": {
@@ -4285,7 +4642,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_instance_service.SetProxyStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_instance_service.SetProxyStruct": {
             "type": "object",
             "required": [
                 "host",
@@ -4309,7 +4666,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_label_service.ChatLabelStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_label_service.ChatLabelStruct": {
             "type": "object",
             "properties": {
                 "jid": {
@@ -4320,7 +4677,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_label_service.EditLabelStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_label_service.EditLabelStruct": {
             "type": "object",
             "properties": {
                 "color": {
@@ -4337,7 +4694,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_label_service.MessageLabelStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_label_service.MessageLabelStruct": {
             "type": "object",
             "properties": {
                 "jid": {
@@ -4351,7 +4708,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.ChatPresenceStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.ChatPresenceStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -4369,7 +4726,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.DownloadMediaStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.DownloadMediaStruct": {
             "type": "object",
             "properties": {
                 "message": {
@@ -4377,7 +4734,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.EditMessageStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.EditMessageStruct": {
             "type": "object",
             "properties": {
                 "chat": {
@@ -4391,7 +4748,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.MarkPlayedStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.MarkPlayedStruct": {
             "type": "object",
             "properties": {
                 "id": {
@@ -4405,7 +4762,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.MarkReadStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.MarkReadStruct": {
             "type": "object",
             "properties": {
                 "id": {
@@ -4419,7 +4776,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.MessageStatusStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.MessageStatusStruct": {
             "type": "object",
             "properties": {
                 "id": {
@@ -4427,7 +4784,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.MessageStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.MessageStruct": {
             "type": "object",
             "properties": {
                 "chat": {
@@ -4438,7 +4795,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_message_service.ReactStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_message_service.ReactStruct": {
             "type": "object",
             "properties": {
                 "fromMe": {
@@ -4458,7 +4815,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.CreateNewsletterStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_newsletter_service.CreateNewsletterStruct": {
             "type": "object",
             "properties": {
                 "description": {
@@ -4469,7 +4826,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterInviteStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterInviteStruct": {
             "type": "object",
             "properties": {
                 "key": {
@@ -4477,7 +4834,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterMessagesStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterMessagesStruct": {
             "type": "object",
             "properties": {
                 "before_id": {
@@ -4491,7 +4848,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_newsletter_service.GetNewsletterStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_newsletter_service.GetNewsletterStruct": {
             "type": "object",
             "properties": {
                 "jid": {
@@ -4499,7 +4856,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_poll_model.PollResults": {
+        "github_com_evolution-foundation_evolution-go_pkg_poll_model.PollResults": {
             "type": "object",
             "properties": {
                 "optionCounts": {
@@ -4521,18 +4878,18 @@ const docTemplate = `{
                 "voters": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_poll_model.VoterInfo"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_poll_model.VoterInfo"
                     }
                 },
                 "votes": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_poll_model.PollVote"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_poll_model.PollVote"
                     }
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_poll_model.PollVote": {
+        "github_com_evolution-foundation_evolution-go_pkg_poll_model.PollVote": {
             "type": "object",
             "properties": {
                 "companyId": {
@@ -4577,7 +4934,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_poll_model.VoterInfo": {
+        "github_com_evolution-foundation_evolution-go_pkg_poll_model.VoterInfo": {
             "type": "object",
             "properties": {
                 "jid": {
@@ -4600,7 +4957,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Button": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Button": {
             "type": "object",
             "properties": {
                 "copyCode": {
@@ -4669,14 +5026,14 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ButtonStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ButtonStruct": {
             "type": "object",
             "properties": {
                 "buttons": {
                     "description": "Buttons array. See combination rules on the parent type description.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Button"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Button"
                     }
                 },
                 "delay": {
@@ -4722,7 +5079,7 @@ const docTemplate = `{
                     "description": "Quoted (reply-to) context.",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                         }
                     ]
                 },
@@ -4737,7 +5094,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselButtonStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselButtonStruct": {
             "type": "object",
             "properties": {
                 "copyCode": {
@@ -4772,7 +5129,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardBodyStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardBodyStruct": {
             "type": "object",
             "properties": {
                 "text": {
@@ -4782,7 +5139,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardHeaderStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardHeaderStruct": {
             "type": "object",
             "properties": {
                 "imageUrl": {
@@ -4806,14 +5163,14 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardStruct": {
             "type": "object",
             "properties": {
                 "body": {
                     "description": "Card body text (required).",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardBodyStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardBodyStruct"
                         }
                     ]
                 },
@@ -4821,7 +5178,7 @@ const docTemplate = `{
                     "description": "Buttons shown on the card. See CarouselButtonStruct for combination rules.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselButtonStruct"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselButtonStruct"
                     }
                 },
                 "footer": {
@@ -4833,13 +5190,13 @@ const docTemplate = `{
                     "description": "Card header (media + title/subtitle).",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardHeaderStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardHeaderStruct"
                         }
                     ]
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselStruct": {
             "type": "object",
             "properties": {
                 "body": {
@@ -4851,7 +5208,7 @@ const docTemplate = `{
                     "description": "Cards displayed in order. At least one card is required.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.CarouselCardStruct"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.CarouselCardStruct"
                     }
                 },
                 "delay": {
@@ -4877,13 +5234,13 @@ const docTemplate = `{
                     "description": "Quoted (reply-to) context.",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                         }
                     ]
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ContactStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ContactStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -4908,14 +5265,14 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 },
                 "vcard": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_utils.VCardStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_utils.VCardStruct"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.LinkStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.LinkStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -4946,7 +5303,7 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 },
                 "text": {
                     "type": "string"
@@ -4959,7 +5316,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.ListStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.ListStruct": {
             "type": "object",
             "properties": {
                 "buttonText": {
@@ -5006,7 +5363,7 @@ const docTemplate = `{
                     "description": "Quoted (reply-to) context.",
                     "allOf": [
                         {
-                            "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                            "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                         }
                     ]
                 },
@@ -5014,7 +5371,7 @@ const docTemplate = `{
                     "description": "Sections with rows. At least one section with one row is required.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Section"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Section"
                     }
                 },
                 "title": {
@@ -5024,7 +5381,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.LocationStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.LocationStruct": {
             "type": "object",
             "properties": {
                 "address": {
@@ -5061,11 +5418,11 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.MediaStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.MediaStruct": {
             "type": "object",
             "properties": {
                 "caption": {
@@ -5099,7 +5456,7 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 },
                 "type": {
                     "type": "string"
@@ -5109,7 +5466,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.PollStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.PollStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -5146,11 +5503,11 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct": {
             "type": "object",
             "properties": {
                 "messageId": {
@@ -5161,7 +5518,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Row": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Row": {
             "type": "object",
             "properties": {
                 "description": {
@@ -5181,14 +5538,14 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Section": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Section": {
             "type": "object",
             "properties": {
                 "rows": {
                     "description": "Rows inside this section.",
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.Row"
+                        "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.Row"
                     }
                 },
                 "title": {
@@ -5198,7 +5555,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.StatusTextStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.StatusTextStruct": {
             "type": "object",
             "properties": {
                 "id": {
@@ -5209,7 +5566,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.StickerStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.StickerStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -5234,14 +5591,14 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 },
                 "sticker": {
                     "type": "string"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.TextStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.TextStruct": {
             "type": "object",
             "properties": {
                 "delay": {
@@ -5269,14 +5626,14 @@ const docTemplate = `{
                     "type": "string"
                 },
                 "quoted": {
-                    "$ref": "#/definitions/github_com_EvolutionAPI_evolution-go_pkg_sendMessage_service.QuotedStruct"
+                    "$ref": "#/definitions/github_com_evolution-foundation_evolution-go_pkg_sendMessage_service.QuotedStruct"
                 },
                 "text": {
                     "type": "string"
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_user_service.BlockStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_user_service.BlockStruct": {
             "type": "object",
             "properties": {
                 "number": {
@@ -5284,7 +5641,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_user_service.CheckUserStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_user_service.CheckUserStruct": {
             "type": "object",
             "properties": {
                 "formatJid": {
@@ -5298,7 +5655,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_user_service.GetAvatarStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_user_service.GetAvatarStruct": {
             "type": "object",
             "properties": {
                 "number": {
@@ -5309,7 +5666,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_user_service.PrivacyStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_user_service.PrivacyStruct": {
             "type": "object",
             "properties": {
                 "callAdd": {
@@ -5335,7 +5692,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_user_service.SetProfilePictureStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_user_service.SetProfilePictureStruct": {
             "type": "object",
             "properties": {
                 "image": {
@@ -5343,7 +5700,7 @@ const docTemplate = `{
                 }
             }
         },
-        "github_com_EvolutionAPI_evolution-go_pkg_utils.VCardStruct": {
+        "github_com_evolution-foundation_evolution-go_pkg_utils.VCardStruct": {
             "type": "object",
             "properties": {
                 "fullName": {
@@ -14310,10 +14667,10 @@ const docTemplate = `{
     },
     "securityDefinitions": {
         "ApiKeyAuth": {
+            "description": "API Key para autenticación. Puede ser el API Key global o el token de instancia.",
             "type": "apiKey",
             "name": "apikey",
-            "in": "header",
-            "description": "API Key para autenticación. Puede ser el API Key global o el token de instancia."
+            "in": "header"
         }
     }
 }`

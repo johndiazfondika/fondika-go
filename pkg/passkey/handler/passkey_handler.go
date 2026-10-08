@@ -39,6 +39,7 @@ func NewPasskeyHandler(svc whatsmeow_service.WhatsmeowService) *PasskeyHandler {
 // @Failure 400 {object} gin.H "token is required"
 // @Failure 404 {object} gin.H "ceremony not found or expired"
 // @Failure 503 {object} gin.H "passkey ceremony unavailable"
+// @Security ApiKeyAuth
 // @Router /passkey-ceremony/{token} [get]
 func (h *PasskeyHandler) GetCeremony(c *gin.Context) {
 	token := c.Param("token")
@@ -93,6 +94,7 @@ func (h *PasskeyHandler) GetCeremony(c *gin.Context) {
 // @Failure 404 {object} gin.H "ceremony not found or expired"
 // @Failure 500 {object} gin.H "Internal server error"
 // @Failure 503 {object} gin.H "passkey ceremony unavailable"
+// @Security ApiKeyAuth
 // @Router /passkey-ceremony/{token}/response [post]
 func (h *PasskeyHandler) SubmitResponse(c *gin.Context) {
 	token := c.Param("token")
@@ -141,6 +143,7 @@ func (h *PasskeyHandler) SubmitResponse(c *gin.Context) {
 // @Failure 404 {object} gin.H "ceremony not found or expired"
 // @Failure 500 {object} gin.H "Internal server error"
 // @Failure 503 {object} gin.H "passkey ceremony unavailable"
+// @Security ApiKeyAuth
 // @Router /passkey-ceremony/{token}/confirm [post]
 func (h *PasskeyHandler) Confirm(c *gin.Context) {
 	token := c.Param("token")

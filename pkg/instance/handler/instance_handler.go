@@ -47,6 +47,7 @@ type instanceHandler struct {
 // @Success 200 {object} gin.H "Instance created successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/create [post]
 func (i *instanceHandler) Create(ctx *gin.Context) {
 	var data *instance_service.CreateStruct
@@ -116,6 +117,7 @@ func (i *instanceHandler) Create(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Instance connected successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/connect [post]
 func (i *instanceHandler) Connect(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -158,6 +160,7 @@ func (i *instanceHandler) Connect(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "Instance reconnected successfully"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/reconnect [post]
 func (i *instanceHandler) Reconnect(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -185,6 +188,7 @@ func (i *instanceHandler) Reconnect(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "Instance disconnected successfully"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/disconnect [post]
 func (i *instanceHandler) Disconnect(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -214,6 +218,7 @@ func (i *instanceHandler) Disconnect(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "Instance logged out successfully"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/logout [delete]
 func (i *instanceHandler) Logout(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -243,6 +248,7 @@ func (i *instanceHandler) Logout(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "Instance status"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/status [get]
 func (i *instanceHandler) Status(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -270,6 +276,7 @@ func (i *instanceHandler) Status(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "Instance QR code"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/qr [get]
 func (i *instanceHandler) Qr(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -299,6 +306,7 @@ func (i *instanceHandler) Qr(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Pairing code"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/pair [post]
 func (i *instanceHandler) Pair(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -338,6 +346,7 @@ func (i *instanceHandler) Pair(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "All instances"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/all [get]
 func (i *instanceHandler) All(ctx *gin.Context) {
 	instances, err := i.instanceService.GetAll()
@@ -359,6 +368,7 @@ func (i *instanceHandler) All(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Instance"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/info/{instanceId} [get]
 func (i *instanceHandler) Info(ctx *gin.Context) {
 	instanceId := ctx.Param("instanceId")
@@ -387,6 +397,7 @@ func (i *instanceHandler) Info(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Instance deleted successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/delete/{instanceId} [delete]
 func (i *instanceHandler) Delete(ctx *gin.Context) {
 	instanceId := ctx.Param("instanceId")
@@ -416,6 +427,7 @@ func (i *instanceHandler) Delete(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Proxy set successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/proxy/{instanceId} [post]
 func (i *instanceHandler) SetProxy(ctx *gin.Context) {
 	instanceId := ctx.Param("instanceId")
@@ -469,6 +481,7 @@ func (i *instanceHandler) SetProxy(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Proxy deleted successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/proxy/{instanceId} [delete]
 func (i *instanceHandler) DeleteProxy(ctx *gin.Context) {
 	instanceId := ctx.Param("instanceId")
@@ -498,6 +511,7 @@ func (i *instanceHandler) DeleteProxy(ctx *gin.Context) {
 // @Success 200 {object} gin.H "Instance force reconnected successfully"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/forcereconnect/{instanceId} [post]
 func (i *instanceHandler) ForceReconnect(ctx *gin.Context) {
 	instanceId := ctx.Param("instanceId")
@@ -551,6 +565,7 @@ type GetLogsQuery struct {
 // @Success 200 {object} gin.H "Logs"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/logs/{instanceId} [get]
 func (h *instanceHandler) GetLogs(c *gin.Context) {
 	instanceId := c.Param("instanceId")
@@ -598,6 +613,7 @@ func (h *instanceHandler) GetLogs(c *gin.Context) {
 // @Failure 400 {object} gin.H "Invalid instance ID"
 // @Failure 404 {object} gin.H "Instance not found"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/{instanceId}/advanced-settings [get]
 func (h *instanceHandler) GetAdvancedSettings(c *gin.Context) {
 	instanceId := c.Param("instanceId")
@@ -628,6 +644,7 @@ func (h *instanceHandler) GetAdvancedSettings(c *gin.Context) {
 // @Failure 400 {object} gin.H "Invalid request data"
 // @Failure 404 {object} gin.H "Instance not found"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /instance/{instanceId}/advanced-settings [put]
 func (h *instanceHandler) UpdateAdvancedSettings(c *gin.Context) {
 	instanceId := c.Param("instanceId")

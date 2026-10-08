@@ -35,6 +35,7 @@ type groupHandler struct {
 // @Produce json
 // @Success 200 {object} gin.H "success"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/list [get]
 func (g *groupHandler) ListGroups(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -64,6 +65,7 @@ func (g *groupHandler) ListGroups(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/info [post]
 func (g *groupHandler) GetGroupInfo(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -105,6 +107,7 @@ func (g *groupHandler) GetGroupInfo(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/invitelink [post]
 func (g *groupHandler) GetGroupInviteLink(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -146,6 +149,7 @@ func (g *groupHandler) GetGroupInviteLink(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/photo [post]
 func (g *groupHandler) SetGroupPhoto(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -192,6 +196,7 @@ func (g *groupHandler) SetGroupPhoto(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/name [post]
 func (g *groupHandler) SetGroupName(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -238,6 +243,7 @@ func (g *groupHandler) SetGroupName(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/description [post]
 func (g *groupHandler) SetGroupDescription(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -282,6 +288,7 @@ func (g *groupHandler) SetGroupDescription(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/create [post]
 func (g *groupHandler) CreateGroup(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -328,6 +335,7 @@ func (g *groupHandler) CreateGroup(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/participant [post]
 func (g *groupHandler) UpdateParticipant(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -377,6 +385,7 @@ func (g *groupHandler) UpdateParticipant(ctx *gin.Context) {
 // @Produce json
 // @Success 200 {object} gin.H "success"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/myall [get]
 func (g *groupHandler) GetMyGroups(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -406,6 +415,7 @@ func (g *groupHandler) GetMyGroups(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/join [post]
 func (g *groupHandler) JoinGroupLink(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -447,6 +457,7 @@ func (g *groupHandler) JoinGroupLink(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/leave [post]
 func (g *groupHandler) LeaveGroup(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
@@ -488,6 +499,7 @@ func (g *groupHandler) LeaveGroup(ctx *gin.Context) {
 // @Success 200 {object} gin.H "success"
 // @Failure 400 {object} gin.H "Error on validation"
 // @Failure 500 {object} gin.H "Internal server error"
+// @Security ApiKeyAuth
 // @Router /group/settings [post]
 func (g *groupHandler) UpdateGroupSettings(ctx *gin.Context) {
 	getInstance := ctx.MustGet("instance")
